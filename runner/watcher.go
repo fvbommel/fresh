@@ -1,10 +1,11 @@
 package runner
 
 import (
-	"github.com/howeyc/fsnotify"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/howeyc/fsnotify"
 )
 
 func watchFolder(path string) {

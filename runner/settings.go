@@ -2,13 +2,14 @@ package runner
 
 import (
 	"fmt"
-	"github.com/pilu/config"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/pilu/config"
 )
 
 const (
