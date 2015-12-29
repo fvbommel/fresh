@@ -33,6 +33,7 @@ Check the `_examples` folder if you want to use it with Martini or Gocraft Web.
 Here is a sample config file with the default settings:
 
     root:              .
+    watch_path:        .
     tmp_path:          ./tmp
     build_name:        runner-build
     build_log:         runner-build-errors.log
@@ -60,4 +61,3 @@ Here is a sample config file with the default settings:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
