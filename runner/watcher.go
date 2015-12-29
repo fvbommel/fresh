@@ -3,7 +3,6 @@ package runner
 import (
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/howeyc/fsnotify"
 )
@@ -40,7 +39,9 @@ func watch() {
 	watchRoot := watchRoot()
 	filepath.Walk(watchRoot, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() && !isTmpDir(path) {
-			if len(path) > 1 && strings.HasPrefix(filepath.Base(path), ".") {
+			// Skip hidden dirs other than "." and "..".
+			base := filepath.Base(path)
+			if len(base) > 1 && base[0] == '.' && base != ".." {
 				return filepath.SkipDir
 			}
 
